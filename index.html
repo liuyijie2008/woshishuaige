@@ -604,6 +604,21 @@ const resume = {
   ],
   projects: [
     {
+      type: "完整交付项目 · 已完成",
+      name: "《星际突袭：霓虹防线》网页飞机大战",
+      period: "2026.09 – 2026.10",
+      tech: ["HTML5 Canvas 2D", "JavaScript ES6", "Web Audio API", "requestAnimationFrame"],
+      points: [
+        "完整实现纵版 STG 游戏的 9 模块架构：Config / AudioSys / Input / Pool / Particles / Entities / WaveManager / Game / UI，状态机覆盖 MENU → PLAYING → PAUSED → GAMEOVER 全流程。",
+        "性能优化：实现通用对象池（子弹 200 / 敌弹 400 / 粒子 500），避免循环内频繁 new；requestAnimationFrame + deltaTime 驱动并上限钳制 0.05s，确保 60 FPS 稳定运行。",
+        "核心玩法落地：5 级武器升级 + 僚机系统 + 护盾 + 6 类道具掉落 + 连击倍率计分 + 波次推进，每 5 波触发 BOSS 战。",
+        "BOSS 三阶段状态机：「湮灭者·奥米加」血量 3000×轮次，按剩余血量切换招式（环形弹幕 → 召唤小怪 → 螺旋弹幕 + 激光预警），阶段切换自动清屏 + 特写震屏。",
+        "视觉 / 音效全部代码生成：三层视差星空 + 霓虹辉光 + 粒子爆炸 + 伤害飘字；Web Audio API 程序化合成射击、爆炸、拾取、警报等 7 类音效，零外部素材。",
+        "多端输入统一抽象：PC 键盘（WASD / 方向键）+ 鼠标拖动 + 移动端触屏自适应，画布等比缩放保持竖屏 480×800 逻辑分辨率。"
+      ],
+      link: { label: "🎮 在线游玩", url: "game.html" }
+    },
+    {
       type: "个人项目 · 进行中",
       name: "电子基础能力筑基计划",
       period: "2026.09 – 至今",
@@ -658,6 +673,9 @@ const resume = {
         { t: "电磁场与无线电", hot: false },
         { t: "C 语言", hot: true },
         { t: "Python（学习中）", hot: true },
+        { t: "HTML5 Canvas 2D", hot: true },
+        { t: "Web Audio API", hot: true },
+        { t: "游戏循环 / deltaTime", hot: true },
         { t: "单片机 / 嵌入式（目标）", hot: false }
       ]
     },
